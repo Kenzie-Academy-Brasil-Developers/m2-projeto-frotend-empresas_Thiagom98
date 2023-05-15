@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+    <title>Página do administrador</title>
+
+</head>
+<body>
+    <header class="header__container">
+        <div class="header__images">
+            <img src="../assets/Ellipse 2.svg" alt="" width="16px" height="16px">
+            <img src="../assets/Kenzie Empresas.svg" alt="" height="22px">
+            
+        </div>
+        <div class="header__buttons">
+            <button class="header__button-login" id="header__logout">Logout</button>
+        </div>
+    </header>
+    <div class="select__container">
+        <select name="" id="" class="select" placeholder="Selecionar ">
+            <option value="" disabled selected>Selecionar empresa</option>
+        </select>
+    </div>
+    <div class="infos__container">
+        <h2 class="infos__name">Departamentos</h2>
+        <button class="infos__button">+ Criar</button>
+    </div>
+    
+    <ul class="department__container department__message"></ul>
+        
+   
+
+    <h2 class="users__name">Usuários cadastrados</h2>
+    
+    <ul class="users__container"></ul>
+    
+    <dialog class="modal__controller modal__controller-geral" id="modal__controlle-edit-user">
+        <div class="modal__container">
+            <h1 class="modal__title">Editar Usuário</h1>
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            <input class="modal__input" type="text" name="name" id="modal__input-edit-user" placeholder="Nome">
+            <input class="modal__input" type="email" name="email" id="modal__input-edit-user" placeholder="E-mail">
+            <button class="modal__button" id="modal__button-edit-user">Salvar</button>
+
+        </div>
+    </dialog>
+    <dialog class="modal__view-department modal__controller-geral">
+        <div class="modal__container-view">
+            <p class="modal__view-department-name"></p>
+            <p class="modal__view-description">description</p>
+            <p class="modal__view-company">companie</p>
+            <div class="div__modalview">
+                <select name="" id="" class="select__modal-outofwork">
+                    <option disabled selected value="">Selecionar Usuário</option>
+                </select>
+                <button class="buttom__hire">Contratar</button>
+            </div>
+            <ul class="modal__viwe-list-container"></ul>
+        
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            
+        </div>
+    </dialog>
+    <dialog class="modal__controller-delete-user modal__controller-geral">
+        <div class="modal__container">
+            <p class="modal__delete-user-text"></p>
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            <button class="modal__delete-user-buton">Remover</button>
+        </div>
+    </dialog>
+    <dialog class="modal__controller-delete-department modal__controller-geral">
+        <div class="modal__container">
+            <p class="modal__delete-department-text"></p>
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            <button class="modal__delete-user-buton" id="modal__delete-department">Remover</button>
+        </div>
+    </dialog>
+    <dialog class="modal__controller modal__controller-geral" id="modal__controller-create">
+        <div class="modal__container">
+            <h1 class="modal__title">Criar Departamento</h1>
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            <input class="modal__input modal__input-create" type="text" name="name" placeholder="Nome">
+            <input class="modal__input modal__input-create"  name="description" placeholder="Descrição">
+            <select name="" class="modal__input-select-create" id="">
+                <option value="" disabled selected>Selecionar empresa</option>
+            </select>
+            <button class="modal__button" id="modal__create-button">Criar</button>
+
+        </div>
+    </dialog>
+    <dialog class="modal__controller modal__controller-geral" id="modal__controller-edit-department">
+        <div class="modal__container">
+            <h1 class="modal__title">Editar Departamento</h1>
+            <img src="../assets/Modalclose.svg" alt="" class="close__modal">
+            <input class="modal__input" type="text" name="name" placeholder="Nome" id="modal__input-department-update">
+            <input class="modal__input" type="email" name="description" placeholder="Descrição" id="modal__input-department-update">
+            <button class="modal__button" id="modal__button-update-department">Salvar</button>
+
+        </div>
+    </dialog>
+    
+    
+</body>
+<script type="module" src="../scripts/admin.js"></script>
+</html>

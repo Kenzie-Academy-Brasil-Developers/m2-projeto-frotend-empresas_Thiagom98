@@ -1,0 +1,138 @@
+.header__container{
+    display: flex;
+    flex-direction: row;
+    padding-left: 18%;
+    padding-right: 18%;
+    justify-content: space-between;
+    height: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header__images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+}
+.header__buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.header__button-login{
+    height: 48px;
+    width: 142px;
+    border: 1px solid var(--color-brand-1);
+    background-color: var(--color-mode);
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: var(--color-brand-1);
+  
+}
+.header__button-login:hover{
+    cursor: pointer;
+}
+.header__button-register{
+    height: 48px;
+    width: 142px;
+    border: 1px solid var(--color-brand-1);
+    background-color: var(--color-brand-1);
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: var(--color-mode);
+}
+.header__button-register:hover{
+    cursor: pointer;
+}
+.img__container{
+    display: flex;
+    justify-content: center;
+}
+.infos__container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.form__container{
+    width: 506px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.95);;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 223px;
+    padding: 3rem;
+    justify-content: space-between;
+}
+.form__title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #000000;
+}
+.form__text-1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+.form__input{
+    box-sizing: border-box;
+    height: 52px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.form__button-login{
+    height: 48px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0000FF;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-mode);
+}
+.form__button-login:hover{
+    cursor: pointer;
+}
+.form__text-2{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+.form__button-register{
+    height: 48px;
+    border: 1px solid var(--color-brand-1);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--color-brand-1);
+
+
+}
+.form__button-register:hover{
+    cursor: pointer;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <title>Página de login</title>
+</head>
+<body>
+    <header class="header__container">
+        <div class="header__images">
+            <img src="../assets/Ellipse 1.svg" alt="" width="16px" height="16px">
+            <img src="../assets/Kenzie Empresas.svg" alt="" height="22px">
+        </div>
+        <div class="header__buttons">
+            <button class="header__button-login" id="header__home">Home</button>
+            <button class="header__button-register" id="header__register">Cadastro</button>
+        </div>
+    </header>
+    <main>
+        <div class="img__container">
+            <img class="login__image" src="../assets/IMG-LOGINPAGE.svg" alt="">
+
+        </div>
+        <div class="infos__container">
+            <form class="form__container" action="">
+                <h1 class="form__title">Login</h1>
+                <p class="form__text-1">Preencha os campos para realizar login</p>
+                <input type="email" name="email" placeholder="Seu e-mail" class="form__input">
+                <input type="password" name="password" placeholder="Sua senha" class="form__input">
+                <button class="form__button-login">Login</button>
+                <p class="form__text-2">ou</p>
+                <button class="form__button-register">Cadastre-se</button>
+            </form>
+            
+        </div>
+    </main>
+    <script type="module" src="../scripts/login.js"></script>
+</body>
+</html>
