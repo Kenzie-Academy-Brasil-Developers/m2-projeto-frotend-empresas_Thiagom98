@@ -6,7 +6,18 @@ const requestHeaders = {
     'Authorization' : `Bearer ${token}`
 }
  
+export const red = '#df1545'
+export const green = '#168821'
 
+export async function toast(color, text) {
+    const toastContainer = document.querySelector('.toast__container')
+    const toastParagraph = document.querySelector('.toast__container > p')
+    toastParagraph.innerText = text
+  
+    toastContainer.style = `background-color: ${color}; border-color: ${color}`
+  
+    toastContainer.classList.remove('hidden')
+  }
 
 export async function getAllCategories (){
     const cate = []
@@ -52,8 +63,8 @@ export async function loginEmployees (loginbody){
                 location.replace('/src/pages/admin.html')
             }
             else{
-                
                 localStorage.clear()
+                toast(green,'login efetuado com sucesso')
                 localStorage.setItem('@kenzieEmpresas: token', JSON.stringify(loginEmployeesJson.authToken))
                 localStorage.setItem('@kenzieEmpresas: admin', JSON.stringify(loginEmployeesJson.isAdm))
                 location.replace('/src/pages/user.html')
@@ -63,6 +74,9 @@ export async function loginEmployees (loginbody){
         }
         else{
             const loginEmployeesJson = await res.json()
+            
+            toast(red,loginEmployeesJson.message)
+
             
         }
     })
@@ -82,7 +96,7 @@ export async function createEmployees (loginbody){
         }
         else{
             const employeesJson = await res.json()
-            
+            toast(red,employeesJson.message)
         }
     })  
     return employees
@@ -267,6 +281,8 @@ export async function updateEmployee(employeId, bodyUpdate){
         }
         else{
             const employeesJsonUpdate = await res.json()
+            toast(red,employeesJsonUpdate.message)
+
             
         }
     })  
@@ -284,7 +300,7 @@ export async function deleteEmployee(employeId){
         }
         else{
             const employeesJsonUpdate = await res.json()
-            
+            toast(red,employeesJsonUpdate.message)
         }
     })  
     return deleteUpdate
@@ -304,7 +320,7 @@ export async function createDepartment(createBody){
         }
         else{
             const employeesJson = await res.json()
-            alert('nao criado')
+            toast(red,employeesJson.message)
         }
     })  
     return createDepartment
@@ -322,6 +338,7 @@ export async function updateDepartment(departmentId, bodyUpdate){
         }
         else{
             const employeesJsonUpdate = await res.json()
+            toast(red,employeesJsonUpdate.message)
            
         }
     })  
@@ -342,6 +359,7 @@ export async function deleteDepartment(departmentId){
         }
         else{
             const employeesJsonUpdate = await res.json()
+            toast(red,employeesJsonUpdate.message)
             
         }
     })  
@@ -360,7 +378,7 @@ export async function hireEmploye(employeId, bodyDepartment){
         }
         else{
             const employeesJsonUpdate = await res.json()
-            arlert('teste')
+            toast(red,employeesJsonUpdate.message)
         }
     })  
     return departmentHire
@@ -378,7 +396,7 @@ export async function fireEmploye(employeId){
         }
         else{
             const employeesFire = await res.json()
-            
+            toast(red,employeesFire.message)
         }
     })  
     return fireEmploye

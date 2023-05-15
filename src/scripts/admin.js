@@ -12,6 +12,20 @@ const allDepartments = await getAllDepartments()
 
 let buttonIdUpdate = ''
 
+const red = '#df1545'
+const green = '#168821'
+async function toast(color, text) {
+    const toastContainer = document.querySelector('.toast__container')
+    const toastParagraph = document.querySelector('.toast__container > p')
+    toastParagraph.innerText = text
+  
+    toastContainer.style = `background-color: ${color}; border-color: ${color}`
+  
+    toastContainer.classList.remove('hidden')
+  }
+
+
+
 function goToHomePage() {
     const buttonLogin = document.querySelector('#header__logout')
     buttonLogin.addEventListener('click', (event) => {
